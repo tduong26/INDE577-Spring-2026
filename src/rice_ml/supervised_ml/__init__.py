@@ -12,3 +12,49 @@ from .multilayer_perceptron import MultilayerPerceptron
 # Decision Tree and Regression Tree
 from .decision_tree import DecisionTreeClassifier, DecisionTree
 from .regression_trees import RegressionTree
+
+# Optimization
+from .gradient_descent import GradientDescent1D, GradientDescentND
+
+# Ensembles
+from .ensemble_methods import (
+    BaggingClassifier,
+    VotingClassifier,
+    RandomForestClassifier,
+)
+
+# Distance metrics
+from .distance_metrics import euclidean_distance, manhattan_distance
+
+
+__all__ = [
+    # Linear models
+    "LinearRegression",
+    "LogisticRegression",
+
+    # Neighbors
+    "KNNClassifier",
+    "KNNRegressor",
+
+    # Perceptron / NN
+    "Perceptron",
+    "MultilayerPerceptron",
+
+    # Trees
+    "DecisionTreeClassifier",
+    "DecisionTree",
+    "RegressionTree",
+
+    # Optimization
+    "GradientDescent1D",
+    "GradientDescentND",
+
+    # Ensembles
+    "BaggingClassifier",
+    "VotingClassifier",
+    "RandomForestClassifier",
+
+    # Metrics
+    "euclidean_distance",
+    "manhattan_distance",
+]
