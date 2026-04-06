@@ -1,9 +1,12 @@
 """
 rice_ml
 
-A ground-up machine learning library built for learning and exploration.
-Covers supervised learning, unsupervised learning, and data preprocessing
-utilities — all exposed through a clean, sklearn-inspired interface.
+A from-scratch machine learning library created for learning,
+experimentation, and clear understanding of core algorithms.
+
+The package includes implementations for supervised learning,
+unsupervised learning, and preprocessing tools, all organized
+with a simple, sklearn-style interface.
 """
 
 # Subpackages
@@ -11,9 +14,7 @@ from . import supervised_learning
 from . import unsupervised_learning
 from . import processing
 
-# --------------------------------------------------
-# Common supervised learning models
-# --------------------------------------------------
+# Supervised learning models
 from .supervised_learning import (
     LinearRegression,
     LogisticRegression,
@@ -26,9 +27,7 @@ from .supervised_learning import (
     RegressionTree,
 )
 
-# --------------------------------------------------
-# Common unsupervised learning models
-# --------------------------------------------------
+# Unsupervised learning models
 from .unsupervised_learning import (
     KMeans,
     DBSCAN,
@@ -36,9 +35,7 @@ from .unsupervised_learning import (
     LabelPropagation,
 )
 
-# --------------------------------------------------
-# Processing utilities
-# --------------------------------------------------
+# Processing and utility functions
 from .processing import (
     standardize,
     minmax_scale,
@@ -55,7 +52,7 @@ __all__ = [
     "unsupervised_learning",
     "processing",
 
-    # Supervised learning
+    # Supervised learning models
     "LinearRegression",
     "LogisticRegression",
     "KNNClassifier",
@@ -66,13 +63,13 @@ __all__ = [
     "DecisionTree",
     "RegressionTree",
 
-    # Unsupervised learning
+    # Unsupervised learning models
     "KMeans",
     "DBSCAN",
     "PCA",
     "LabelPropagation",
 
-    # Processing utilities
+    # Processing and utility functions
     "standardize",
     "minmax_scale",
     "train_test_split",
