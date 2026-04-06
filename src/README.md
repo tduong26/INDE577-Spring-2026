@@ -18,6 +18,32 @@ The guiding principles of `rice_ml` are:
 
 > This library is not intended to replace production ML frameworks, but to explain them.
 
+## Package Structure
+
+rice_ml/
+├── processing/
+│   ├── preprocessing.py
+│   └── post_processing.py
+│
+├── supervised_learning/
+│   ├── linear_regression.py
+│   ├── logistic_regression.py
+│   ├── gradient_descent.py
+│   ├── knn.py
+│   ├── distance_metrics.py
+│   ├── perceptron.py
+│   ├── multilayer_perceptron.py
+│   ├── decision_tree.py
+│   ├── regression_trees.py
+│   └── ensemble_methods.py
+│
+├── unsupervised_learning/
+│   ├── k_means_clustering.py
+│   ├── dbscan.py
+│   ├── pca.py
+│   └── community_detection.py
+│
+└── init.py
 ---
 Each module is self-contained and mirrors the structure and behavior of its theoretical counterpart.
 
