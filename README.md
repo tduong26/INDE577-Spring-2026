@@ -32,27 +32,53 @@ This repository includes:
 ## Repository Structure
 
 ```
-.
+INDE577-Spring-2026/
+│
 ├── src/
-│   └── rice_ml/
+│   └── rice_ml/                          # Core installable ML package
+│       ├── __init__.py
 │       ├── supervised_learning/
+│       │   ├── linear_regression.py
+│       │   ├── logistic_regression.py
+│       │   ├── k_nearest_neighbors.py
+│       │   ├── perceptron.py
+│       │   ├── decision_tree.py
+│       │   ├── regression_tree.py
+│       │   ├── ensemble_methods.py
+│       │   └── neural_network.py         
 │       ├── unsupervised_learning/
-│       ├── processing/
-│       └── __init__.py
+│       │   ├── k_means_clustering.py
+│       │   ├── dbscan.py
+│       │   ├── pca.py
+│       │   └── community_detection.py
+│       └── processing/
+│           └── preprocessing.py          # Standardization & helper utilities
 │
-├── notebooks/
+├── examples/                             # Notebooks & scripts per algorithm
 │   ├── supervised_learning/
+│   │   ├── linear_regression.ipynb
+│   │   ├── logistic_regression.ipynb
+│   │   ├── k_nearest_neighbors.ipynb
+│   │   ├── perceptron.ipynb
+│   │   ├── decision_tree.ipynb
+│   │   ├── regression_tree.ipynb
+│   │   ├── ensemble_methods.ipynb
+│   │   └── neural_network.ipynb
 │   └── unsupervised_learning/
+│       ├── k_means_clustering.ipynb
+│       ├── dbscan.ipynb
+│       ├── pca.ipynb
+│       └── community_detection.ipynb
 │
-├── examples/
+├── tests/                                # pytest test suite
+│   └── ...                               # Unit tests for correctness & edge cases
 │
-├── tests/
-│   ├── unit/
-│   └── ...
+├── .github/
+│   └── workflows/                        # CI/CD GitHub Actions
 │
-├── pyproject.toml
+├── pyproject.toml                        # Build config, dependencies, pytest paths
 ├── README.md
-├── LICENSE
+├── LICENSE                               
 └── .gitignore
 ```
 
@@ -61,11 +87,9 @@ This repository includes:
 ### `src/rice_ml/`
 Core Python package implementing machine learning algorithms from scratch, including both supervised and unsupervised learning methods.
 
-### `notebooks/`
-Jupyter notebooks that explain the usage, behavior, and interpretation of implemented algorithms on real and synthetic datasets.
-
 ### `examples/`
-Additional example scripts and demonstrations for model training, evaluation, and visualization.
+
+Example scripts and Jupyter notebooks demonstrating model training, evaluation, and visualization for each implemented algorithm.
 
 ### `tests/`
 Unit tests written with `pytest` to verify correctness, numerical behavior, and edge cases of the implemented methods.
