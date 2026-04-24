@@ -40,45 +40,50 @@ INDE577-Spring-2026/
 │       ├── supervised_learning/
 │       │   ├── linear_regression.py
 │       │   ├── logistic_regression.py
-│       │   ├── k_nearest_neighbors.py
+│       │   ├── knn.py
 │       │   ├── perceptron.py
+│       │   ├── multilayer_perceptron.py
 │       │   ├── decision_tree.py
-│       │   ├── regression_tree.py
+│       │   ├── regression_trees.py
 │       │   ├── ensemble_methods.py
-│       │   └── neural_network.py         
+│       │   ├── gradient_descent.py
+│       │   └── distance_metrics.py
 │       ├── unsupervised_learning/
 │       │   ├── k_means_clustering.py
 │       │   ├── dbscan.py
 │       │   ├── pca.py
 │       │   └── community_detection.py
 │       └── processing/
-│           └── preprocessing.py          # Standardization & helper utilities
+│           ├── pre_processing.py         # Standardization, train/test split
+│           └── post_processing.py        # Metrics (accuracy, R², MSE, etc.)
 │
-├── examples/                             # Notebooks & scripts per algorithm
+├── examples/                             # Jupyter notebooks per algorithm
 │   ├── supervised_learning/
-│   │   ├── linear_regression.ipynb
-│   │   ├── logistic_regression.ipynb
-│   │   ├── k_nearest_neighbors.ipynb
-│   │   ├── perceptron.ipynb
-│   │   ├── decision_tree.ipynb
-│   │   ├── regression_tree.ipynb
-│   │   ├── ensemble_methods.ipynb
-│   │   └── neural_network.ipynb
+│   │   ├── Linear Regression/linear_regression_example.ipynb
+│   │   ├── Logistic Regression/logistic_regression_example.ipynb
+│   │   ├── KNN/knn_example.ipynb
+│   │   ├── Perceptron/perceptron_example.ipynb
+│   │   ├── Multilayer Perceptron/multilayer_perceptron_example.ipynb
+│   │   ├── Decision Tree/decision_tree_example.ipynb
+│   │   ├── Regression Trees/regression_trees_example.ipynb
+│   │   ├── Ensemble Methods/ensemble_methods_example.ipynb
+│   │   └── Gradient Descent/gradient_descent_example.ipynb
 │   └── unsupervised_learning/
-│       ├── k_means_clustering.ipynb
-│       ├── dbscan.ipynb
-│       ├── pca.ipynb
-│       └── community_detection.ipynb
+│       ├── K-Means Clustering/k_means_clustering_example.ipynb
+│       ├── DBScan/dbscan_example.ipynb
+│       ├── PCA/pca_example.ipynb
+│       └── Community Detection/community_detection_example.ipynb
 │
 ├── tests/                                # pytest test suite
 │   └── ...                               # Unit tests for correctness & edge cases
 │
 ├── .github/
-│   └── workflows/                        # CI/CD GitHub Actions
+│   └── workflows/
+│       └── pr-tests.yml                  # CI runs pytest on push/PR
 │
 ├── pyproject.toml                        # Build config, dependencies, pytest paths
 ├── README.md
-├── LICENSE                               
+├── LICENSE
 └── .gitignore
 ```
 
