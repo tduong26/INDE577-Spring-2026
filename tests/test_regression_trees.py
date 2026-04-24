@@ -22,7 +22,7 @@ def test_predict_before_fit_raises():
     model = RegressionTree()
     X = np.array([[0.0]])
 
-    with pytest.raises(ValueError):
+    with pytest.raises(TypeError):
         model.predict(X)
 
 

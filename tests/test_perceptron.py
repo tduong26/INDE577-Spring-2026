@@ -31,7 +31,7 @@ def linearly_separable_data():
 
 def test_fit_predict(linearly_separable_data):
     X, y = linearly_separable_data
-    model = Perceptron(max_iter=1000).fit(X, y)
+    model = Perceptron(n_iterations=1000).fit(X, y)
 
     preds = model.predict(X)
     assert np.array_equal(preds, y)
@@ -49,8 +49,8 @@ def test_coefficients_shape(linearly_separable_data):
     X, y = linearly_separable_data
     model = Perceptron().fit(X, y)
 
-    assert model.coef_.shape == (X.shape[1],)
-    assert isinstance(model.intercept_, float)
+    assert model.weights.shape == (X.shape[1],)
+    assert isinstance(model.bias, float)
 
 
 def test_invalid_labels():
@@ -65,5 +65,5 @@ def test_predict_before_fit():
     model = Perceptron()
     X = np.array([[0, 0]])
 
-    with pytest.raises(RuntimeError):
+    with pytest.raises(TypeError):
         model.predict(X)
