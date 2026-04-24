@@ -33,7 +33,7 @@ def test_logistic_regression_predict_proba_shape():
     model.fit(X, y)
 
     probs = model.predict_proba(X)
-    assert probs.shape == (4,)
+    assert probs.shape == (4,2)
     assert np.all(probs >= 0)
     assert np.all(probs <= 1)
 

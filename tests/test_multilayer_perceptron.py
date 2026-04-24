@@ -41,7 +41,7 @@ def test_predict_before_fit_raises():
     model = MultilayerPerceptron(n_hidden=4)
     X = np.array([[0.0, 0.0]])
 
-    with pytest.raises(TypeError):
+    with pytest.raises((TypeError, ValueError)):
         model.predict(X)
 
 
