@@ -1,5 +1,5 @@
 # Preprocessing utilities
-from .preprocessing import (
+from .pre_processing import (
     minmax_scale,
     standardize,
     train_test_split,

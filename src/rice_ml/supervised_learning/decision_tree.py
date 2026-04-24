@@ -318,3 +318,6 @@ class DecisionTreeClassifier:
             _recurse(node.right, depth + 1)
 
         _recurse(self.tree_, 0)
+
+# After the DecisionTreeClassifier class definition
+DecisionTree = DecisionTreeClassifier
