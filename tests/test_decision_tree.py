@@ -1,6 +1,6 @@
 import numpy as np
 
-from rice_ml.supervised_ml.decision_tree import DecisionTreeClassifier
+from rice_ml.supervised_learning.decision_tree import DecisionTreeClassifier
 
 
 def test_simple_tree_fit_and_predict():

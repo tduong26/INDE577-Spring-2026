@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 
-from rice_ml.supervised_ml.linear_regression import LinearRegression
+from rice_ml.supervised_learning.linear_regression import LinearRegression
 
 
 def test_linear_regression_fit_and_predict_simple():

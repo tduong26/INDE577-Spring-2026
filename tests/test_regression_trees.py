@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 
-from rice_ml.supervised_ml.regression_tree import RegressionTree
+from rice_ml.supervised_learning.regression_trees import RegressionTree
 
 
 # ---------------------------------------------------------------------

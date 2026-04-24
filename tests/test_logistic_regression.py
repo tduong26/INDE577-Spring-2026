@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 
-from rice_ml.supervised_ml.logistic_regression import LogisticRegression
+from rice_ml.supervised_learning.logistic_regression import LogisticRegression
 
 
 def test_sigmoid_outputs_between_zero_and_one():
