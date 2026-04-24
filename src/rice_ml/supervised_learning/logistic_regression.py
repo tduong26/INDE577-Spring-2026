@@ -52,6 +52,8 @@ def _prepare_X_y(X, y=None) -> Tuple[np.ndarray, Optional[np.ndarray]]:
     X = _as_2d_float(X)
 
     if y is None:
+        if X.shape[0] == 0:
+            raise ValueError("X must not be empty.")
         return X, None
 
     y = np.asarray(y, dtype=float)
@@ -61,9 +63,11 @@ def _prepare_X_y(X, y=None) -> Tuple[np.ndarray, Optional[np.ndarray]]:
     if X.shape[0] != y.shape[0]:
         raise ValueError("X and y must have the same number of samples.")
 
+    if X.shape[0] == 0:
+        raise ValueError("X and y must not be empty.")
+
     _validate_binary_y(y)
     return X, y
-
 
 # ----------------------------------------------------------------------
 # Logistic Regression Model

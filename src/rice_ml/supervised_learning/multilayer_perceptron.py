@@ -98,9 +98,9 @@ class MultilayerPerceptron:
         """Initialize weights and biases."""
         rng = np.random.default_rng(self.random_state)
 
-        self.W1 = rng.normal(loc=0.0, scale=0.1, size=(n_features, self.n_hidden))
+        self.W1 = rng.normal(loc=0.0, scale=np.sqrt(1.0 / n_features), size=(n_features, self.n_hidden))
         self.b1 = np.zeros((1, self.n_hidden))
-        self.W2 = rng.normal(loc=0.0, scale=0.1, size=(self.n_hidden, 1))
+        self.W2 = rng.normal(loc=0.0, scale=np.sqrt(1.0 / self.n_hidden), size=(self.n_hidden, 1))
         self.b2 = np.zeros((1, 1))
 
     def fit(self, X: np.ndarray, y: np.ndarray) -> "MultilayerPerceptron":
