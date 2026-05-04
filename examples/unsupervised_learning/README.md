@@ -1,4 +1,4 @@
-# Unsupervised Learning
+# Unsupervised Learning Notebooks
 
 ## Overview
 
@@ -6,7 +6,7 @@
 
 This folder includes a set of **from-scratch implementations and example notebooks** covering major unsupervised learning approaches. Each notebook explores a different way of describing structure in data, such as clustering by distance, grouping by density, reducing dimensionality through variance, or detecting communities through graph links.
 
-The notebooks are written to highlight **intuition**, **mathematical reasoning**, and **clear interpretation**, instead of depending entirely on black-box tools.
+The notebooks for the INDE577 project are written to highlight **intuition**, **mathematical reasoning**, and **clear interpretation**, instead of depending entirely on black-box tools.
 
 ---
 
