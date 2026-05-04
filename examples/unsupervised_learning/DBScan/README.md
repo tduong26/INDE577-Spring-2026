@@ -42,7 +42,7 @@ DBSCAN is controlled by two main hyperparameters:
   declare a dense region  
 
 We write `eps` and `min_samples` in code, and use $\varepsilon$ and
-`min_samples` in equations.
+$m$ in equations.
 
 ### $\varepsilon$-Neighborhood
 
@@ -50,16 +50,18 @@ For a point $x$ in a dataset $D$, the $\varepsilon$-neighborhood is the
 set of all points within distance $\varepsilon$ of $x$:
 
 $$
-N_\varepsilon(x) = \{\, y \in D \mid \operatorname{distance}(x,y) \le \varepsilon \,\}
+N_\varepsilon(x) = \{\, y \in D \mid d(x,y) \le \varepsilon \,\}
 $$
+
+where $d(x, y)$ denotes the Euclidean distance between $x$ and $y$.
 
 ### Core Point
 
 A point $x$ is a **core point** if its $\varepsilon$-neighborhood
-contains at least `min_samples` points:
+contains at least $m$ points (where $m = $ `min_samples`):
 
 $$
-|N_\varepsilon(x)| \ge \texttt{min\_samples}
+|N_\varepsilon(x)| \ge m
 $$
 
 ### Border and Noise Points
