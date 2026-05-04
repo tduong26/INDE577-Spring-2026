@@ -46,7 +46,7 @@ DBSCAN is controlled by two main hyperparameters:
 For a point $x$, the $\varepsilon$-neighborhood is:
 
 $$
-N_\varepsilon(x) = \{ y \mid \text{distance}(x,y) \le \varepsilon \}
+N_\varepsilon(x) = \{ y \mid \operatorname{distance}(x,y) \le \varepsilon \}
 $$
 
 ### Core Point
