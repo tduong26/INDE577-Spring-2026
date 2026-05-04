@@ -1,4 +1,3 @@
-
 # Spring 2026: IND 577: Data Science and Machine Learning
 
 ### Name: Thomas Duong
@@ -75,13 +74,12 @@ INDE577-Spring-2026/
 │       └── Community Detection/community_detection_example.ipynb
 │
 ├── tests/                                # pytest test suite
-│   └── ...                               # Unit tests for correctness & edge cases
 │
 ├── .github/
 │   └── workflows/
-│       └── pr-tests.yml                  # CI runs pytest on push/PR
+│       └── pr-tests.yml                  # CI runs pytest on push and PR
 │
-├── pyproject.toml                        # Build config, dependencies, pytest paths
+├── pyproject.toml                        # Build config and dependencies
 ├── README.md
 ├── LICENSE
 └── .gitignore
@@ -93,8 +91,7 @@ INDE577-Spring-2026/
 Core Python package implementing machine learning algorithms from scratch, including both supervised and unsupervised learning methods.
 
 ### `examples/`
-
-Example scripts and Jupyter notebooks demonstrating model training, evaluation, and visualization for each implemented algorithm.
+Jupyter notebooks demonstrating model training, evaluation, and visualization for each implemented algorithm.
 
 ### `tests/`
 Unit tests written with `pytest` to verify correctness, numerical behavior, and edge cases of the implemented methods.
@@ -115,19 +112,20 @@ The `rice_ml` package includes implementations of important machine learning alg
 - Perceptron
 - Decision Trees
 - Regression Trees
-- Ensemble Methods
-- Neural Networks / Multilayer Perceptron (MLP)
+- Ensemble Methods (Bagging, Voting, Random Forest)
+- Gradient Descent (1D and N-D)
+- Multilayer Perceptron (MLP)
 
 ### Unsupervised Learning
 - K-Means Clustering
 - DBSCAN
 - Principal Component Analysis (PCA)
-- Community Detection
+- Community Detection (Label Propagation)
 
 ### Processing Utilities
-- Feature standardization
-- Basic preprocessing transformations
-- Helper functions for model preparation and evaluation
+- Feature standardization and min-max scaling
+- Train/test splitting
+- Evaluation metrics (accuracy, R², MSE, confusion matrix)
 
 ---
 
@@ -147,7 +145,7 @@ The goal is not only to build working machine learning models, but also to under
 
 ## Notebooks and Examples
 
-The notebooks and examples in this repository are designed as teaching and learning resources. They typically include:
+The notebooks in `examples/` are designed as teaching and learning resources. They typically include:
 
 - Dataset loading and exploration
 - Preprocessing and scaling
@@ -169,10 +167,11 @@ pip install -e .
 
 ## Running Tests
 
-All tests are located in the `tests/` directory and can be run with:
+From the repository root, install the test dependencies and run pytest:
 
 ```bash
-pytest -q
+pip install -e ".[test]"
+pytest
 ```
 
 The test suite is intended to check:
@@ -189,34 +188,35 @@ The test suite is intended to check:
 from rice_ml.supervised_learning.linear_regression import LinearRegression
 from rice_ml.supervised_learning.logistic_regression import LogisticRegression
 from rice_ml.unsupervised_learning.k_means_clustering import KMeans
-from rice_ml.processing.preprocessing import standardize
+from rice_ml.processing.pre_processing import standardize
 ```
 
 ## Project Goals
 
 This repository was built to:
 
-Deepen understanding of machine learning algorithms through from-scratch implementation
-Practice professional Python package organization
-Integrate code, testing, and documentation into one reproducible project
-Provide educational examples for supervised and unsupervised learning
-Emphasize assumptions, interpretation, and algorithmic behavior
-Support coursework in IND 577
-Purpose
+- Deepen understanding of machine learning algorithms through from-scratch implementation
+- Practice professional Python package organization
+- Integrate code, testing, and documentation into one reproducible project
+- Provide educational examples for supervised and unsupervised learning
+- Emphasize assumptions, interpretation, and algorithmic behavior
+- Support coursework in IND 577
+
+## Purpose
 
 This repository serves as:
 
-A from-scratch machine learning library
-A course project repository for IND 577
-A reference implementation of classical machine learning methods
-A learning tool for understanding machine learning algorithms beyond built-in libraries
+- A from-scratch machine learning library
+- A course project repository for IND 577
+- A reference implementation of classical machine learning methods
+- A learning tool for understanding machine learning algorithms beyond built-in libraries
 
 ## License
 
-This project is intended for educational use as part of IND 577.
-Refer to the repository for additional licensing details.
+This project is released under the MIT License. See [LICENSE](LICENSE) for details.
 
 ## Author
-Thomas Duong
+
+**Thomas Duong**
 Rice University
 IND 577
